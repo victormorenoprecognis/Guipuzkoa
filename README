@@ -1,0 +1,26 @@
+ 
+El plugin de sqlite de cof es este
+
+io.litehelpers.cordova.sqlite
+
+El resto de plugins son estos otros
+cordova-plugin-dialogs
+cordova-plugin-inappbrowser
+cordova-plugin-splashscreen
+cordova-plugin-statusbar
+cordova-plugin-whitelist
+org.apache.cordova.file
+org.apache.cordova.file-transfer
+org.apache.cordova.geolocation
+org.apache.cordova.network-information
+
+nuevo color verde del logo  80bd00
+
+color morado logo nuevo 8e1960
+
+
+
+
+server PHP version PHP/5.6.40
+brew install shivammathur/php/php@5.6.4
+php -S localhost:8081

@@ -1,0 +1,200 @@
+[05-Sep-2023 11:22:07 UTC] PHP Notice:  Undefined variable: userTokk in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 24
+[05-Sep-2023 11:22:26 UTC] PHP Notice:  Undefined variable: userTokk in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 24
+[05-Sep-2023 11:26:30 UTC] PHP Warning:  debug_backtrace() expects parameter 1 to be long, string given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 16
+[05-Sep-2023 11:26:33 UTC] PHP Warning:  debug_backtrace() expects parameter 1 to be long, string given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 16
+[05-Sep-2023 11:28:28 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 5
+[05-Sep-2023 11:28:30 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 5
+[05-Sep-2023 11:28:38 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 5
+[05-Sep-2023 11:29:56 UTC] PHP Notice:  Undefined index: userTokk in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 5
+[05-Sep-2023 11:29:56 UTC] PHP Notice:  Undefined index: userTokk in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 5
+[05-Sep-2023 11:30:11 UTC] PHP Notice:  Undefined index: userTokk in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 15
+[05-Sep-2023 12:10:10 UTC] PHP Notice:  Undefined variable: _SESSION in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 52
+[05-Sep-2023 12:10:37 UTC] PHP Notice:  Undefined variable: _SESSION in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 52
+[05-Sep-2023 12:10:44 UTC] PHP Notice:  Undefined variable: _SESSION in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 52
+[05-Sep-2023 12:16:09 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 16
+[05-Sep-2023 12:18:15 UTC] PHP Warning:  Missing argument 1 for getNeighborhoodsJSON(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 107
+[05-Sep-2023 12:18:15 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 109
+[05-Sep-2023 12:19:20 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[05-Sep-2023 12:20:05 UTC] PHP Notice:  Undefined variable: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[05-Sep-2023 12:21:01 UTC] PHP Notice:  Undefined variable: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[05-Sep-2023 12:21:14 UTC] PHP Notice:  Undefined variable: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[05-Sep-2023 12:23:45 UTC] PHP Notice:  Undefined variable: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[05-Sep-2023 12:30:34 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 16
+[05-Sep-2023 12:30:34 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[05-Sep-2023 12:30:34 UTC] PHP Notice:  Undefined variable: tokken in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[05-Sep-2023 12:31:19 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 16
+[05-Sep-2023 12:31:54 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[05-Sep-2023 12:31:54 UTC] PHP Notice:  Undefined variable: tokken in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[05-Sep-2023 12:32:32 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[05-Sep-2023 12:32:32 UTC] PHP Notice:  Undefined variable: tokken in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[05-Sep-2023 12:34:22 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[05-Sep-2023 12:34:22 UTC] PHP Notice:  Undefined variable: tokken in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:06:15 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:06:15 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:06:20 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:06:20 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:06:29 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:06:29 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:06:45 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 99 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:06:45 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:11:38 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 38
+[06-Sep-2023 07:11:45 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 38
+[06-Sep-2023 07:26:03 UTC] PHP Notice:  Undefined offset: 1 in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 247
+[06-Sep-2023 07:28:35 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 22
+[06-Sep-2023 07:28:40 UTC] PHP Notice:  Undefined variable: allLocations in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 193
+[06-Sep-2023 07:28:44 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 96 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:28:44 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:29:12 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 22
+[06-Sep-2023 07:29:14 UTC] PHP Notice:  Undefined variable: allLocations in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 193
+[06-Sep-2023 07:29:14 UTC] PHP Warning:  Missing argument 1 for getAllPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 96 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 82
+[06-Sep-2023 07:29:14 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 86
+[06-Sep-2023 07:54:33 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 41
+[06-Sep-2023 07:54:34 UTC] PHP Notice:  Undefined variable: parmaciesGuardForTown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 513
+[06-Sep-2023 07:57:33 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 27
+[06-Sep-2023 07:57:33 UTC] PHP Warning:  Missing argument 8 for getPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 111 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 264
+[06-Sep-2023 07:57:33 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 271
+[06-Sep-2023 07:58:22 UTC] PHP Warning:  Missing argument 8 for getPharmacies(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 111 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 264
+[06-Sep-2023 07:58:22 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 271
+[13-Sep-2023 08:21:22 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 21
+[13-Sep-2023 08:21:24 UTC] PHP Notice:  Undefined variable: allLocations in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 193
+[13-Sep-2023 08:22:37 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 21
+[13-Sep-2023 08:23:46 UTC] PHP Notice:  Undefined index: userToken in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 12
+[13-Sep-2023 08:23:50 UTC] PHP Notice:  Undefined variable: pharmaciesByTownAndService in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 745
+[13-Sep-2023 08:24:59 UTC] PHP Notice:  Undefined variable: pharmaciesByTownAndService in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 745
+[13-Sep-2023 08:26:02 UTC] PHP Warning:  Invalid argument supplied for foreach() in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 729
+[13-Sep-2023 08:26:02 UTC] PHP Notice:  Undefined variable: allpharmacies in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 733
+[13-Sep-2023 08:52:13 UTC] PHP Warning:  Missing argument 3 for getPrograms(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 185 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 622
+[13-Sep-2023 08:52:13 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 627
+[13-Sep-2023 08:52:25 UTC] PHP Warning:  Missing argument 3 for getPrograms(), called in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 185 and defined in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 622
+[13-Sep-2023 08:52:25 UTC] PHP Notice:  Undefined variable: token in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 627
+[13-Sep-2023 09:06:04 UTC] PHP Notice:  Undefined variable: pharmaciesByTownAndService in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 759
+[13-Sep-2023 09:23:18 UTC] PHP Notice:  Array to string conversion in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 751
+[13-Sep-2023 09:47:31 UTC] PHP Notice:  Undefined variable: counter in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 750
+[13-Sep-2023 10:01:23 UTC] PHP Warning:  odbc_connect(): SQL error: [unixODBC][Driver Manager]Data source name not found and no default driver specified, SQL state IM002 in SQLConnect in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 876
+[13-Sep-2023 10:36:46 UTC] PHP Notice:  Array to string conversion in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 749
+[13-Sep-2023 10:36:46 UTC] PHP Notice:  Undefined variable: Array in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 749
+[13-Sep-2023 10:38:23 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 750
+[13-Sep-2023 10:39:20 UTC] PHP Notice:  Array to string conversion in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 751
+[13-Sep-2023 10:40:44 UTC] PHP Notice:  Undefined variable: neihboourhoodPharmaciesObject in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 447
+[13-Sep-2023 11:11:11 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:12 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:12 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:12 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:13 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:13 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:14 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:14 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:14 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:15 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:15 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:16 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:16 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:16 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:17 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:18 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:18 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:18 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:19 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:19 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:20 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:20 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:20 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:21 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:21 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:11:22 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 748
+[13-Sep-2023 11:15:19 UTC] PHP Warning:  Illegal string offset 'id' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:15:20 UTC] PHP Notice:  Undefined index: id in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:16:58 UTC] PHP Warning:  Illegal string offset '_tgl_accountid_value' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:16:58 UTC] PHP Notice:  Undefined variable: neihboourhoodPharmaciesObject in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 447
+[13-Sep-2023 11:16:58 UTC] PHP Notice:  Undefined index: _tgl_accountid_value in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:16:58 UTC] PHP Notice:  Undefined variable: neihboourhoodPharmaciesObject in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 447
+[13-Sep-2023 11:18:32 UTC] PHP Warning:  Illegal string offset '_tgl_accountid_value' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:18:32 UTC] PHP Notice:  Undefined variable: neihboourhoodPharmaciesObject in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 447
+[13-Sep-2023 11:18:32 UTC] PHP Notice:  Undefined index: _tgl_accountid_value in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 746
+[13-Sep-2023 11:18:32 UTC] PHP Notice:  Undefined variable: neihboourhoodPharmaciesObject in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 447
+[13-Sep-2023 11:42:25 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:27 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:28 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:28 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:28 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:28 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:28 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:29 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:29 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:29 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:29 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:29 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:30 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:30 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:30 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:42:30 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:43:04 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:43:04 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:43:04 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:43:04 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:43:04 UTC] PHP Notice:  Undefined index: address_num in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 311
+[13-Sep-2023 11:54:02 UTC] PHP Notice:  Array to string conversion in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 138
+[13-Sep-2023 11:54:02 UTC] PHP Notice:  Undefined variable: Array in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 138
+[13-Sep-2023 11:54:17 UTC] PHP Notice:  Array to string conversion in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 138
+[13-Sep-2023 11:54:17 UTC] PHP Notice:  Undefined variable: Array in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 138
+[13-Sep-2023 12:21:37 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 15
+[13-Sep-2023 12:21:49 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 15
+[13-Sep-2023 12:24:46 UTC] PHP Notice:  Undefined index: tok in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 15
+[14-Sep-2023 08:03:41 UTC] PHP Notice:  Undefined variable: parmaciesGuardForTown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 569
+[14-Sep-2023 08:04:26 UTC] PHP Notice:  Undefined variable: parmaciesGuardForTown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 569
+[14-Sep-2023 08:04:56 UTC] PHP Notice:  Undefined variable: parmaciesGuardForTown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 570
+[14-Sep-2023 08:05:50 UTC] PHP Notice:  Undefined variable: pharmaciesGuardOnGuardTime in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 572
+[14-Sep-2023 10:45:23 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:45:24 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:45:25 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:45:36 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:45:37 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:45:38 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 631
+[14-Sep-2023 10:46:29 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 633
+[14-Sep-2023 10:46:29 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 633
+[14-Sep-2023 10:46:30 UTC] PHP Notice:  Undefined variable: pharTimetable in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 633
+[15-Sep-2023 08:01:56 UTC] PHP Parse error:  syntax error in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:02:00 UTC] PHP Parse error:  syntax error in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:05 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:06 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:06 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:07 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:07 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:08 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:08 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:04:08 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:13 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:13 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:14 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:14 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:14 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:15 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:16 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:05:16 UTC] PHP Notice:  Undefined index: D in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 248
+[15-Sep-2023 08:35:16 UTC] PHP Warning:  odbc_connect(): SQL error: [unixODBC][Driver Manager]Data source name not found and no default driver specified, SQL state IM002 in SQLConnect in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 916
+[21-Sep-2023 08:46:59 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'No 'value' array found in the JSON response.' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php:205
+Stack trace:
+#0 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(66): getLocations('eyJ0eXAiOiJKV1Q...')
+#1 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(19): getLocationsJSON('eyJ0eXAiOiJKV1Q...')
+#2 {main}
+  thrown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 205
+[21-Sep-2023 08:47:05 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'No 'value' array found in the JSON response.' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php:205
+Stack trace:
+#0 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(66): getLocations('eyJ0eXAiOiJKV1Q...')
+#1 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(19): getLocationsJSON('eyJ0eXAiOiJKV1Q...')
+#2 {main}
+  thrown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 205
+[21-Sep-2023 08:48:27 UTC] PHP Warning:  Illegal string offset 'value' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 186
+[21-Sep-2023 08:59:47 UTC] PHP Fatal error:  Uncaught exception 'Exception' with message 'No 'value' array found in the JSON response.' in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php:521
+Stack trace:
+#0 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(83): getGuardZones('eyJ0eXAiOiJKV1Q...')
+#1 /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php(32): getGuardZonesJSON('eyJ0eXAiOiJKV1Q...')
+#2 {main}
+  thrown in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/functions.php on line 521
+[21-Sep-2023 09:15:16 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[21-Sep-2023 09:15:24 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[21-Sep-2023 09:15:48 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[21-Sep-2023 09:16:38 UTC] PHP Notice:  Undefined variable: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 26
+[21-Sep-2023 09:16:52 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 26
+[21-Sep-2023 09:19:15 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25
+[21-Sep-2023 09:19:17 UTC] PHP Notice:  Undefined index: nei in /Users/urtziaresti/Desktop/Cordova_Ionic/WWW/CofGipuzkoaWeb/ws/cofg_ws.php on line 25

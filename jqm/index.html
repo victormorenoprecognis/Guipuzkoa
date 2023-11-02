@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta charset="UTF-8">
+	<title>COFGipuzkoa</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.custom.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+	<script type="text/javascript" src="js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/localStorageHelper.js"></script>
+	<script type="text/javascript" src="js/utils.js"></script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQX2Z4BTPL"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-PQX2Z4BTPL');
+	</script>
+
+
+	<script>
+		/* 
+		  * JQUERYMOBILE INITIALIZATION 
+		  */
+		$(document).bind("mobileinit", function () {
+			// disable page transitions
+			$.mobile.defaultPageTransition = 'none';
+			$.mobile.loadingMessageTextVisible = false;
+		});
+	</script>
+	<script type="text/javascript" src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/libs/googleAnalytics.js"></script>
+	<script type="text/javascript">
+		function checkLanguageSelected() {
+			var str_lang = getValue('cofg_lang');
+			if (str_lang != null) {
+				window.location = "cofg.html";
+			}
+		}
+
+		function setLang(lang) {
+			setValue('cofg_lang', lang);
+			window.location = "cofg.html";
+		}
+		checkLanguageSelected();
+	</script>
+</head>
+
+<body>
+	<!-- Page Select Lang-->
+	<div data-role="page" id="pagemore_language" data-theme="d">
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<h1 class="custom-page-title">COF Gipuzkoa</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-theme="d">
+				<li><a href="cofg.html" id="eu" data-ajax="false" onclick="setLang($(this).attr('id'));">Euskara</a>
+				</li>
+				<li><a href="cofg.html" id="es" data-ajax="false" onclick="setLang($(this).attr('id'));">Castellano</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

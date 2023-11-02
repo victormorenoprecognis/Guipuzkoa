@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta charset="UTF-8">
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first-generation iPad: -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">-->
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+	<!-- TODO: if we distinct pixels or something: $('link[rel="apple-touch-icon"]').href = 'iPad_version.png'; // assuming jQuery -->
+	<title>COFGipuzkoa</title>
+	<script type="text/javascript" src="js/loadExtras.js" />
+	</script>
+	<script type="text/javascript">
+		/* 
+		  * JQUERYMOBILE INITIALIZATION 
+		  */
+		$(document).bind("mobileinit", function () {
+			// disable page transitions
+			$.mobile.defaultPageTransition = 'none';
+			// set error message
+			$.mobile.loadingMessageTextVisible = true;
+			$.mobile.loadingMessage = global_lang['loading'];
+			$.mobile.pageLoadErrorMessage = global_lang['pageload_error'];
+			// placeholder for search listviews
+			$.mobile.listview.prototype.options.filterPlaceholder = global_lang['listfilter_placeholder'];
+		});
+	</script>
+
+	<script type="text/javascript">
+		/* 
+			  * CORDOVA INITIALIZATION 
+			  */
+		document.addEventListener('deviceready', onDeviceReady, false);
+	</script>
+
+</head>
+
+<body>
+	<div class="ui-popup-screen ui-overlay-b ui-screen-hidden" id="loading-popup"></div>
+	<!-- Apartado CERCA DE MI - Map-->
+	<div data-role="page" id="pagenexttome_map" class="page_map exit-app" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-id="app_header" data-theme="e">
+			<a href="#pagenexttome_list"
+				class="ui-btn-left ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-icon-custom-iconnexttome_list ui-nodisc-icon custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="nexttome"></h1>
+			<!--<a href="#pagenexttome_filter" class="ui-btn ui-btn-right ui-btn-up-b ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-icon-custom-iconnexttome_filter ui-nodisc-icon custom-header-icon"></a>-->
+		</div>
+
+		<div role="main" class="content-map ui-content">
+			<div id="nexttomemap_canvas" class="map-canvas">
+				<!-- Dynamically created -->
+			</div>
+			<!--<a class='flotante' href='http://m.layar.com/open/farmaciagipuzkoa' ><img src='images/layar_icon.png' border="0"/></a>-->
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon custom-border-radius"
+							data-icon="custom-iconnexttome" data-iconpos="top" data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado CERCA DE MI - List-->
+	<div data-role="page" id="pagenexttome_list" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#pagenexttome_map"
+				class="ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-icon-custom-iconnexttome_map ui-nodisc-icon custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="nexttome"></h1>
+			<!--<a href="#pagenexttome_filter" class="ui-btn ui-btn-right ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-icon-custom-iconnexttome_filter ui-nodisc-icon custom-header-icon" ></a>-->
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" id="listdynamic_ntmlist" data-theme="d">
+				<!-- Dynamically created from #pagenexttome_list -->
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn-active ui-state-persist ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado CERCA DE MI - filtro -->
+	<div data-role="page" id="pagenexttome_filter" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="nexttome"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form id="form_filter">
+				<div class="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal" id="ntm_filter_group">
+						<legend data-t="select_filter">:</legend>
+						<input type="radio" name="showAll" id="ntm_filterradio_all" value="1" checked="checked" />
+						<label for="ntm_filterradio_all" data-t="all"></label>
+						<input type="radio" name="showAll" id="ntm_filterradio_opened" value="0" />
+						<label for="ntm_filterradio_opened" data-t="opened"></label>
+					</fieldset>
+				</div>
+				<div class="fieldcontain">
+					<label for="distance" data-t="distance">:</label>
+					<input type="range" name="distance" id="ntm_filterrange_distance" data-theme="a" value="1" min="1"
+						max="10" />
+				</div>
+				<div class="fieldcontain">
+					<input type="submit" id="ntm_submitfilter" data-theme="c" data-inline="true" data-t="send" />
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS -->
+	<div data-role="page" id="pagepharmacies" data-theme="d" class="exit-app">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<h1 class="custom-page-title" data-t="pharmacies"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-theme="d">
+				<li><a href="#pagepharmacies_guard" data-t="pharmacies_guard" id="pagepharmacies_guard_id"></a></li>
+				<li><a href="" id="slow_loading_don" data-t="pharmacies_don"></a></li>
+				<li><a href="" id="slow_loading_gip" data-t="pharmacies_gip"></a></li>
+				<li><a href="#pagepharmacies_prog" data-t="pharmacies_prog" id="pagepharmacies_prog_id"></a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Guardia -->
+	<div data-role="page" id="pagepharmacies_guard" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="pharmacies_guard"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form id="form_guard">
+				<div data-role="fieldcontain" class="fieldcontain2">
+					<select name="month" id="pg_selectmonth" data-native-menu="true">
+						<option value="1" data-t="january"></option>
+						<option value="2" data-t="february"></option>
+						<option value="3" data-t="march"></option>
+						<option value="4" data-t="april"></option>
+						<option value="5" data-t="may"></option>
+						<option value="6" data-t="june"></option>
+						<option value="7" data-t="july"></option>
+						<option value="8" data-t="august"></option>
+						<option value="9" data-t="september"></option>
+						<option value="10" data-t="october"></option>
+						<option value="11" data-t="november"></option>
+						<option value="12" data-t="december"></option>
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="fieldcontain2">
+					<select name="day" id="pg_selectday" data-native-menu="true">
+						<!-- Dynamically filled from js -->
+					</select>
+				</div>
+				<div class="fieldcontain2">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-theme="d">
+						<input type="radio" name="guardtime" id="pg_radioguardtime_day" value="0" checked="checked" />
+						<label for="pg_radioguardtime_day" class="radio_txt" data-t="day"></label>
+
+						<input type="radio" name="guardtime" id="pg_radioguardtime_night" value="1" />
+						<label for="pg_radioguardtime_night" class="radio_txt" data-t="night"></label>
+					</fieldset>
+				</div>
+				<div data-role="fieldcontain" class="fieldcontain2">
+					<select name="guardzone" id="pg_selectguardzone" data-native-menu="true">
+						<!-- Dynamically created -->
+					</select>
+				</div>
+				<div class="fieldcontain">
+					<input type="submit" id="pg_submitguard" data-theme="c" data-inline="true" data-t="send" />
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Donosti -->
+	<div data-role="page" id="pagedonosti_list" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="pharmacies_don"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<!-- Dynamically created -->
+			<ul data-role="listview" id="listdynamic_don" data-theme="d">
+				<!-- Dynamically created from #pagedonosti_list -->
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Gipuzkoa -->
+	<div data-role="page" id="pagegipuzkoa_list" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="pharmacies_gip"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" id="listdynamic_gip" data-filter="true" data-theme="d">
+				<!-- Dynamically created from #pagegipuzkoa_list -->
+			</ul>
+		</div>
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Programas -->
+	<div data-role="page" id="pagepharmacies_prog" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="pharmacies_prog"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form id="form_prog">
+				<div data-role="fieldcontain" class="fieldcontain2">
+					<select name="prog" id="pg_selectProg" data-native-menu="true">
+						<!-- Dynamically filled from js -->
+					</select>
+				</div>
+				<div data-role="fieldcontain" class="fieldcontain2">
+					<select name="loc" id="pg_selectProgLoc" data-native-menu="true">
+						<!-- Dynamically filled from js -->
+					</select>
+				</div>
+				<div data-role="fieldcontain" id="pg_divSelectProgNei" class="fieldcontain2" style="display: none">
+					<select name="nei" id="pg_selectProgNei" data-native-menu="true">
+						<!-- Dynamically filled from js -->
+					</select>
+				</div>
+				<div class="fieldcontain">
+					<input type="submit" id="pg_submitProg" data-theme="c" data-inline="true" data-t="send" />
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Lista Farmacias -->
+	<div data-role="page" id="pagepharmacies_list" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 id="pagepharmacies_list_h1"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" id="listdynamic_pha" data-theme="d">
+				<!-- Dynamically created from DDBB -->
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIAS - Lista Farmacias - Info Farmacia -->
+	<div data-role="page" id="pagepharmacy_info" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" id="pagepharmacy_info_h1"></h1>
+			<a href="" id="linkfavorite"
+				class="ui-btn ui-btn-right ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconaddfavorite custom-header-icon"></a>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" id="listdynamic_p_info" data-inset="true" class="icon25_list" data-theme="d">
+				<!-- Dynamically created from previous page -->
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FARMACIA - Mapa -->
+	<div data-role="page" id="pagepharmacy_map" class="page_map" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="map"></h1>
+		</div>
+
+		<div role="main" class="content-map ui-content">
+			<div id="pharmacymap_canvas" class="map-canvas">
+				<!-- Dynamically created from js-->
+			</div>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado FAVORITOS (Lista Farmacias) -->
+	<div data-role="page" id="pagefavorites_list" data-theme="d" class="exit-app">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<h1 class="custom-page-title" data-t="favorites"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" id="listdynamic_favpha" data-theme="d">
+				<!-- Dynamically created from cookies -->
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon custom-border-radius"
+							data-icon="custom-iconfavorites" data-iconpos="top" data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado MÁS -->
+	<div data-role="page" id="pagemore" data-theme="d" class="exit-app">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<h1 class="custom-page-title" data-t="more"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" class="icon30_list" data-theme="d">
+				<!-- <li><a href="#pagemore_lastminute" id="pagemore_lastminute_link"><img src="images/menulastminute.png"
+							alt="+" class="ui-li-icon custom-about-item-icon"><span data-t="lastminute"></span></a></li> -->
+				<li><a href="#pagemore_college"><img src="images/menucollege.png" alt="+"
+							class="ui-li-icon custom-about-item-icon"><span data-t="college"></span></a></li>
+				<li><a href="#pagemore_dentalEmergencies"><img src="images/dentalemergencies.png" alt="+"
+							class="ui-li-icon custom-about-item-icon"><span data-t="dental"></span></a></li>
+				<li><a href="#pagemore_language"><img src="images/menulanguage.png" alt="+"
+							class="ui-li-icon custom-about-item-icon"><span data-t="language"></span></a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Apartado MAS - Ultima hora -->
+	<!-- <div data-role="page" id="pagemore_lastminute" data-theme="d">
+			
+			<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false" data-theme="e">
+				<a href="#" data-rel="back" id="back_button" class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+				<h1 class="custom-page-title" data-t="lastminute"></h1>
+			</div>
+					
+			<div role="main" id="p_lastmin" class="ui-content">
+				<ul data-role="listview" id = "lmin">
+				</ul>
+			</div>
+			
+			<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle= "false" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#pagenexttome_map" class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius" data-t="nexttome"></a></li>
+						<li><a href="#pagepharmacies" class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius" data-t="pharmacies"></a></li>
+						<li><a href="#pagefavorites_list" class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius" data-t="favorites"></a></li>
+						<li><a href="#pagemore" class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius" data-t="more"></a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div> -->
+
+	<!-- Apartado MAS - Ultima hora - Descripcion -->
+	<!-- <div data-role="page" id="pagemore_lastminute_description" data-theme="d">
+			
+			<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle= "false" data-theme="e">
+				<a href="#" data-rel="back" id="back_button" class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+				<h1 class="custom-page-title" id="notice_title" data-t="lastminute"></h1>
+			</div>			
+			
+			<div role="main" id="lmindesc" class="ui-content">
+			</div>
+			
+			<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle= "false" data-theme="b">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#pagenexttome_map" class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius" data-t="nexttome"></a></li>
+						<li><a href="#pagepharmacies" class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius" data-t="pharmacies"></a></li>
+						<li><a href="#pagefavorites_list" class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius" data-t="favorites"></a></li>
+						<li><a href="#pagemore" class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius" data-t="more"></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div> -->
+
+	<!-- Apartado MAS - El colegio -->
+	<div data-role="page" id="pagemore_college" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="college"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<div data-role="fieldcontain" class="fieldcontain">
+				<img src="images/cofg.png" alt="COFGipuzkoa" />
+				<p data-t="cofg_c"></p>
+			</div>
+			<p data-t="cofg_desc"></p>
+			<p data-t="cofg_opentime"></p>
+			<ul data-role="listview" id="liststatic_cofg" data-inset="true" class="icon25_list2" data-theme="d">
+				<li data-role="list-divider" data-t="contact" data-theme="b"></li>
+				<li><a id="pagemore_college_map_link" href="" class="map_link2 contact-link-item ext-link" data-name
+						data-latitude data-long itude target="_blank" rel="external">
+						<img src="images/loc.png" alt="" class="ui-li-icon custom-more-icon" />
+						<h1 data-t="address"></h1>
+						<p id="p_cofg_address" data-t="cofg_address"></p>
+					</a></li>
+				<li><a id="pagemore_college_tel_link" href="" rel="external" class="tel_link contact-link-item ext-link"
+						target="_blank">
+						<img src="images/tel.png" alt="Tel.:" class="ui-li-icon custom-more-icon" />
+						<h1 data-t="telephone_fax"></h1>
+						<p data-t="cofg_tel_fax" class="pagemore_college_tel_number"></p>
+					</a></li>
+				<li><a id="pagemore_college_mail_link" href="" rel="external" class="contact-link-item ext-link"
+						target="_blank">
+						<img src="images/mail.png" alt="@" class="ui-li-icon custom-more-icon" />
+						<h1 data-t="mail"></h1>
+						<p data-t="cofg_mail"></p>
+					</a></li>
+				<li><a id="pagemore_college_web_link" href="" rel="external" class="contact-link-item ext-link"
+						target="_blank">
+						<img src="images/web_icon.png" alt="Web:" class="ui-li-icon custom-more-icon" />
+						<h1 data-t="web"></h1>
+						<p data-t="cofg_web"></p>
+					</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+	<!-- Apartado MAS - Urgencias Dentales Gipuzkoa -->
+	<div data-role="page" id="pagemore_dentalEmergencies" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title" data-t="dental"></h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<h3 align="center" data-t="dental_title"></h3>
+			<hr>
+			<p data-t="dental_opening"></p>
+			<p data-t="dental_info"></p>
+			<ul data-role="listview" id="liststatic_cofg" data-inset="true" class="icon25_list2" data-theme="d">
+				<li data-role="list-divider" data-t="contact" data-theme="b"></li>
+				<li><a id="pagemore_dental_tel_link" href="" rel="external" class="tel_link contact-link-item ext-link"
+						target="_blank">
+						<img src="images/tel.png" alt="Tel.:" class="ui-li-icon custom-more-icon" />
+						<h1 data-t="telephone"></h1>
+						<p data-t="dental_telephone" class="pagemore_dental_tel_number"></p>
+					</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<!-- Apartado MAS - Cambio de idioma -->
+	<div data-role="page" id="pagemore_language" data-theme="d">
+
+		<div data-role="header" id="persistentheader" data-id="app_header" data-position="fixed" data-tap-toggle="false"
+			data-theme="e">
+			<a href="#" data-rel="back" id="back_button"
+				class="ui-btn-inner ui-shadow-custom panel-btn ui-btn ui-btn-left ui-btn-icon-notext ui-btn-up-b ui-shadow ui-btn-corner-all ui-nodisc-icon ui-icon-custom-iconback custom-header-icon"></a>
+			<h1 class="custom-page-title">COFGipuzkoa</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-theme="d">
+				<li><a href="cofg.html" id="eu" data-ajax="false" onclick="setLang($(this).attr('id'));">Euskara</a>
+				</li>
+				<li><a href="cofg.html" id="es" data-ajax="false" onclick="setLang($(this).attr('id'));">Castellano</a>
+				</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" id="persistentfooter" data-id="app_footer" data-position="fixed" data-tap-toggle="false"
+			data-theme="b">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pagenexttome_map"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconnexttome ui-btn-icon-top custom-border-radius"
+							data-t="nexttome"></a></li>
+					<li><a href="#pagepharmacies"
+							class="ui-nodisc-icon ui-link ui-btn ui-icon-custom-iconpharmacies ui-btn-icon-top custom-border-radius"
+							data-t="pharmacies"></a></li>
+					<li><a href="#pagefavorites_list"
+							class="ui-nodisc-icon ui-btn ui-icon-custom-iconfavorites ui-btn-icon-top custom-border-radius"
+							data-t="favorites"></a></li>
+					<li><a href="#pagemore"
+							class="ui-btn-active ui-state-persist ui-nodisc-icon ui-btn ui-icon-custom-iconmore ui-btn-icon-top custom-border-radius"
+							data-t="more"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
